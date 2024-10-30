@@ -12,7 +12,7 @@ use core::arch::asm;
 #[repr(align(4096))]
 #[derive(Copy, Clone)]
 struct KernelStack {
-    data: [u8; KERNEL_STACK_SIZE],
+    data: [u8; KERNEL_STACK_SIZE], // note 本实验为每个进程(task)提供了一个内核栈
 }
 
 #[repr(align(4096))]
